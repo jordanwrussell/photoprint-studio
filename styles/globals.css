@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1a1a1a;
+  --accent: #ff6b35;
+  --light: #f5f5f5;
+  --border: #e0e0e0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--primary);
+  background: white;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Custom button styles */
+.btn {
+  @apply px-6 py-3 rounded-lg font-medium transition-all duration-200;
+}
+
+.btn-primary {
+  @apply bg-accent text-white hover:bg-opacity-90 active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-light text-primary border border-gray-300 hover:bg-gray-100;
+}
+
+.btn-ghost {
+  @apply text-accent hover:bg-accent hover:bg-opacity-10;
+}
+
+/* Form inputs */
+input[type='text'],
+input[type='email'],
+input[type='password'],
+textarea,
+select {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent focus:ring-opacity-10;
+}
+
+/* Loading spinner */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 107, 53, 0.1);
+  border-top-color: #ff6b35;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+/* Utility classes */
+.fade-in {
+  animation: fadeIn 0.6s ease-in;
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Image upload preview */
+.image-preview {
+  @apply w-full h-48 object-cover rounded-lg border-2 border-dashed border-gray-300;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow;
+}
+
+/* Success/Error states */
+.alert {
+  @apply px-4 py-3 rounded-lg mb-4;
+}
+
+.alert-success {
+  @apply bg-green-50 border border-green-300 text-green-800;
+}
+
+.alert-error {
+  @apply bg-red-50 border border-red-300 text-red-800;
+}
+
+.alert-info {
+  @apply bg-blue-50 border border-blue-300 text-blue-800;
+}
