@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "db:setup": "node scripts/db-setup.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -25,9 +24,5 @@
     "tailwindcss": "^3.3.0",
     "postcss": "^8.4.31",
     "autoprefixer": "^10.4.16"
-  },
-  "optionalDependencies": {
-    "sqlite3": "^5.1.6",
-    "sharp": "^0.32.0"
   }
 }
