@@ -236,9 +236,10 @@ export default function AdminDashboard() {
         </div>
 
         {/* Orders Tab */}
-        {activeTab === 'orders' && <> (
-        {/* Stats Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+        {activeTab === 'orders' && (
+          <>
+            {/* Stats Cards */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           <div className="bg-white rounded-lg p-6 border border-gray-200">
             <p className="text-gray-600 text-sm mb-2">Total Orders</p>
             <p className="text-3xl font-bold text-primary">{stats.total}</p>
@@ -295,7 +296,8 @@ export default function AdminDashboard() {
             <p className="text-gray-600">No orders in this category</p>
           </div>
         )}
-          </>
+        </>
+        )}
 
         {/* Packages Tab */}
         {activeTab === 'packages' && (
